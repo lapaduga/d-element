@@ -1,0 +1,132 @@
+.hero {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	background: url("../img/ilustration_bg.svg") 80% 54.5% no-repeat,
+		url("../img/shadown_illustration.svg") 80% 70% no-repeat,
+		linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+	@media (max-width: 1366px) {
+		background: url("../img/ilustration_bg.svg") 94% 54.5% no-repeat,
+			url("../img/shadown_illustration.svg") 97% 70% no-repeat,
+			linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+	}
+	@media (max-width:1024px) {
+		&:before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			background: 
+			linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%),
+			rgba(255, 255, 255, 0.8);
+		}
+	}
+	&__body {
+		padding-left: 210px;
+		@media (max-width:1240px) {
+			padding-left: 0;
+		}
+	}
+
+	&__info {
+		min-height: 768px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 520px;
+		padding: 100px 0;
+		@media (max-width:425px) {
+			min-height: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__text {
+		margin-bottom: 70px;
+		max-width: 425px;
+		@media (max-width:360px) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__btn {
+		align-self: flex-start;
+		@media (max-width:768px) {
+			position: relative;
+			z-index: 5;
+		}
+	}
+}
+.parallax {
+	&__item {
+		position: absolute;
+		pointer-events: none;
+		transition: all 0.5s ease 0s;
+		@media (max-width:1024px) {
+			opacity: 0.5;
+		}
+		@media (max-width:768px) {
+			opacity: 0.1;
+		}
+	}
+
+	&__item--woman {
+		z-index: 4;
+		top: 39%;
+		left: 78%;
+		@media (max-width: 1366px) {
+			top: 40%;
+			left: 84.5%;
+		}
+		@media (max-width:1024px) {
+			top: 40%;
+			left: auto;
+			right: 2%;
+		}
+	}
+
+	&__item--home {
+		z-index: 3;
+		top: 12%;
+		left: 70%;
+		@media (max-width: 1366px) {
+			top: 12.5%;
+			left: 74%;
+		}
+		@media (max-width:1024px) {
+			top: 12.5%;
+			left: auto;
+			right: 5%;
+		}
+	}
+
+	&__item--platform {
+		z-index: 2;
+		top: 46%;
+		left: 60%;
+		@media (max-width:1024px) {
+			top: 55%;
+			left: auto;
+			right: 17%;
+		}
+	}
+
+	&__item--man {
+		z-index: 1;
+		top: 53%;
+		left: 55%;
+		@media (max-width: 1366px) {
+			top: 53%;
+			left: 53%;
+		}
+		@media (max-width:1024px) {
+			left: auto;
+			top: 63%;
+			right: 43%;
+		}
+	}
+}

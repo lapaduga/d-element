@@ -1,0 +1,135 @@
+.services {
+	padding: 180px 0 210px 0;
+	@media (max-width:900px) {
+		padding: 100px 0;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width:900px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		@media (max-width:900px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__column--left {
+		.card {
+			margin-left: 80px;
+		}
+		@media (max-width:900px) {
+			.card {
+				margin-left: 0;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&__column--right {
+		.card:first-child{
+			margin-bottom: 100px;
+		}
+		@media (max-width:900px) {
+			.card:first-child{
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&__subtitle {
+		max-width: 361px;
+		margin-bottom: 158px;
+		@media (max-width:900px) {
+			max-width: none;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+	}
+}
+.card {
+	&__body {
+		max-width: 380px;
+		min-height: 525px;
+		background-color: #ffffff;
+		box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+		border-radius: 10px;
+		will-change: transform;
+		padding: 236px 48px 48px 48px;
+		position: relative;
+		@media (max-width:425px) {
+			padding: 220px 24px 24px 24px;
+			max-width: 286px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		&.card__image--card01 {
+			top: -22px;
+			left: 50%;
+			transform: translate(calc(-50% + 5px), 0);
+		}
+		&.card__image--card02 {
+			top: 48px;
+			left: 64px;
+			@media (max-width:425px) {
+				left: 10%;
+			}
+		}
+		&.card__image--card03 {
+			top: 48px;
+			left: 90px;
+			@media (max-width:425px) {
+				left: 14%;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		line-height: 150%;
+		letter-spacing: 0.05em;
+		color: var(--font-color);
+		margin-bottom: 16px;
+		@media (max-width:425px) {
+			font-size: 18px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 214%;
+		letter-spacing: 0.05em;
+		color: #5a98d0;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		@media (any-hover: hover) {
+			&:hover {
+				&:after {
+					transform: translate(-5px,0);
+				}
+			}
+		}
+		&:after {
+			content: '';
+			transform: translate(0,0);
+			transition: transform 0.3s ease 0s;
+			display: inline-block;
+			margin-left: 28px;
+			width: 16px;
+			height: 16px;
+			background: url("../img/forward.svg") center no-repeat;
+		}
+	}
+}

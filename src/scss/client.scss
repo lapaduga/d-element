@@ -1,0 +1,123 @@
+.client {
+	background: #5a98d0;
+	border-radius: 200px 0px 0px 0px;
+	padding-top: 96px;
+	@media (max-width:425px) {
+		border-radius: 100px 0px 0px 0px;
+		padding-top: 70px;
+	}
+	&__top {
+		display: flex;
+		margin-bottom: 110px;
+		@media (max-width:1240px) {
+			flex-direction: column;
+			align-items: flex-end;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__subtitle {
+		max-width: 230px;
+		margin-right: 97px;
+		@media (max-width:1240px) {
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 32px;
+		}
+		@media (max-width:425px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		max-width: 540px;
+		text-align: right;
+	}
+
+	&__slider {
+		margin-bottom: 125px;
+		overflow-x: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #316099 rgb(255, 255, 255);
+		&::-webkit-scrollbar {
+			width: 4px;
+			height: 4px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #ffffff;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #316099;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #4983ca;
+				}
+			}
+		}
+		@media (max-width:425px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		flex: 0 0 235.5px;
+		height: 256px;
+		font-size: 20px;
+		line-height: 230%;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			border-right: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+
+.logo-card {
+	overflow: hidden;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	color: #ffffff;
+	@media (any-hover: hover) {
+		&:hover {
+			span {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+			}
+			.logo-card__cover {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+	&.logo-card--top {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	span {
+		transition: all 0.3s ease 0s;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+	&__cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(31, 63, 104, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s ease 0s;
+		transform: translate3d(0, -100%, 0);
+	}
+}

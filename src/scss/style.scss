@@ -1,0 +1,117 @@
+// Common
+@import "normalize";
+@import "fonts";
+
+// General styles
+:root {
+	--font-color: #1f3f68;
+	--white: #ffffff;
+}
+html {
+	&._lock {
+		overflow: hidden;
+	}
+}
+body {
+	font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--font-color);
+}
+section {
+	overflow-y: hidden;
+}
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 17px;
+}
+.small-container {
+	margin: 0 auto;
+	max-width: 974px;
+	padding: 0 17px;
+}
+.title {
+	font-family: "Galien", serif;
+	font-size: 64px;
+	line-height: 116%;
+	letter-spacing: 0.04em;
+	padding: 0;
+	margin: 0;
+	@media (max-width: 768px) {
+		position: relative;
+		z-index: 5;
+		font-size: 50px;
+	}
+	@media (max-width: 425px) {
+		font-size: 44px;
+	}
+	@media (max-width: 360px) {
+		font-size: 38px;
+	}
+}
+.subtitle {
+	font-size: 36px;
+	line-height: 128%;
+	letter-spacing: 0.05em;
+	color: #316099;
+	&.subtitle--white {
+		color: #ffffff;
+	}
+	@media (max-width:768px) {
+		font-size: 32px;
+	}
+	@media (max-width:425px) {
+		font-size: 30px;
+	}
+	@media (max-width:360px) {
+		font-size: 28px;
+	}
+}
+.text {
+	font-size: 16px;
+	line-height: 162%;
+	letter-spacing: 0.05em;
+	opacity: 0.6;
+	&.text--white {
+		color: #ffffff;
+	}
+	@media (max-width: 768px) {
+		opacity: 1;
+	}
+}
+.btn {
+	min-width: 220px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #5a98d0;
+	box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+	border-radius: 10px;
+	color: var(--white);
+	padding: 15px 48px;
+	font-size: 16px;
+	line-height: 162%;
+	text-align: center;
+	letter-spacing: 0.04em;
+	border: 1px solid #5a98d0;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #ffffff;
+			color: #5a98d0;
+		}
+	}
+	@media (max-width: 360px) {
+		width: 100%;
+	}
+}
+
+// Components
+@import "header";
+@import "hero";
+@import "services";
+@import "client";
+@import "work";
+@import "footer";
+@import "popup";

@@ -1,0 +1,23 @@
+section.popup#popup 
+	.popup__body 
+		.popup__content 
+			a(href="#").popup__close.close-popup
+				span
+			h3.popup__title SEND US MESSAGE
+			form.popup__form.form
+				.spinner
+					.loader
+				label.form__label
+					span.form__caption Full Name
+					input(type="text" name="username" placeholder="Your Name").form__control._req
+				label.form__label
+					span.form__caption Email
+					input(type="email" name="email" placeholder="Your Email").form__control._req._email
+				label.form__label
+					span.form__caption Message
+					textarea(name="message" placeholder="Your Message").form__control
+				.form__alert Please, fill in all required fields!
+				button(type="submit").form__btn.btn SUBMIT
+
+
+
